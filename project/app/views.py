@@ -25,23 +25,23 @@ def index(request):
 
         'city:city_name,
 
-        'weather_discription': weather_data['weather'][0]['description'],
+        'weather_discription':weather_data['weather'][0]['description'],
 
-        *temperature_kelvin' :weather_data['main']['temp'],
+        'temperature_kelvin' :weather_data['main']['temp'],
 
-        'temperature_celsius': math.floor(weather_data['main']['temp']- 273.15), #Convert to Celsius
+        'temperature_celsius':math.floor(weather_data['main']['temp']- 273.15), #Convert to Celsius
 
-        'humidity': weather_data['main'] ['humidity'],
+        'humidity':weather_data['main'] ['humidity'],
 
-        'temp_min_celsius': math.floor(weather_data['main']['temp_min'] 273.15), #Convert to Celsius
+        'temp_min_celsius':math.floor(weather_data['main']['temp_min'] 273.15), #Convert to Celsius
 
-        'temp_max_celsius': math.floor(weather_data['main']['temp_max'] 273.15), #Convert to Celsius
+        'temp_max_celsius':math.floor(weather_data['main']['temp_max'] 273.15), #Convert to Celsius
 
-        sunrise:dt_object.strftime('%H:%M:%S*), sunset: dt_object1.strftime('%H:%M:%S'),
+        'sunrise':dt_object.strftime('%H:%M:%S'), sunset: dt_object1.strftime('%H:%M:%S'),
 
         'visibility':math.floor(weather_data['visibility']/1000),
 
-        'cloud': weather_data['clouds']['all'],
+        'cloud':weather_data['clouds']['all'],
 
         "wind":weather_data['wind'] ['speed'],
 
