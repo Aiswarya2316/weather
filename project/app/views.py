@@ -49,7 +49,9 @@ def index(request):
 
         'feel_temp':math.floor(weather_data['main']['feels_like']-273.15),
 
-        'sea_level':weather_data['main']['sea_level'], 'grnd_level':weather_data['main']['grnd_level'],
+        'sea_level':weather_data['main']['sea_level'], 
+        
+        'grnd_level':weather_data['main']['grnd_level'],
 
 }
 
