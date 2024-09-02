@@ -36,8 +36,14 @@
 <body>
    <h2>ARIDITY WEATHER WIDGET</h2>
     <div class="card">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="city">city: </label>
+            <input type="text" id="city" name="city"><br><br>
+            <input type="submit" value="Go">
+          </form><br><br>
         <div class="left">
-            
+            <p><strong>city :</strong>{{data.city}}</p> 
             <p><strong>Visibility</strong>{{data.visibility}}km</p>
             <p><strong>cloud</strong>{{data.cloud}}%</p>
             <p><strong>Wind</strong>{{data.wind}}km/h</p>
